@@ -1,0 +1,41 @@
+{{>header}}
+	<h1>Inscribir Cursos</h1>
+		<form action="/inscribir" method="POST">
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="CC">Documento de Identidad</label>
+					<input type="text" class="form-control" placeholder="Documento" name= "documento" value= "{{documento}}" required>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="inputNombre">Nombre</label>
+					<input type="text" class="form-control" placeholder="Nombre" name="nombre" value= "{{nombre}}" required>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="Correo">Correo</label>
+					<input type="email" class="form-control" placeholder="Correo" name= "correo" value= "{{correo}}" required>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="telefono">Telefono</label>
+					<input type="tel" class="form-control" placeholder="Telefono" name="telefono" value= "{{telefono}}" required>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="Cursos">Cursos</label>
+					<select class="form-control" name="cursoId">
+						{{{NombresCursos listado}}}
+					</select>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-5"></div>
+					<div class="col-1 align-center "> 
+						<button type="submit" class="btn btn-primary" >Enviar</button>
+					</div>
+				</div>
+			</div>
+		</form>
+{{>footer}}

@@ -1,0 +1,46 @@
+{{>header}}
+	<h1>Crear Curso</h1>
+	<form action="/creacionCurso" method="POST">
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label for="inputid">ID</label>
+				<input type="number" class="form-control" placeholder="ID" name= "ID" required>
+			</div>
+			<div class="form-group col-md-6">
+				<label for="inputNombre">Nombre</label>
+				<input type="text" class="form-control" placeholder="Nombre" name="nombre" required>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label for="modalidad">Modalidad</label>
+				<input type="text" class="form-control" placeholder="Modalidad" name="modalidad">
+			</div>
+			<div class="form-group col-md-6">
+				<label for="inputNombre">Valor</label>
+				<input type="number" class="form-control" placeholder="Valor" name="valor" required>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label for="Descripcion">Descripcion:</label>
+				<textarea class="form-control" rows="5" name="descripcion"></textarea required>
+			</div>
+			<div class="form-group col-md-6">
+				<label for="intensidad">Intensidad horaria</label>
+				<input type="number" class="form-control" placeholder="Valor" name = "intensidad"> 
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-5"></div>
+				<div class="col-1 align-center "> 
+		 		 	<button type="submit" class="btn btn-primary" >Enviar</button>
+				</div>
+			</div>
+
+		</div>
+	</form>
+
+	<h2>{{mostrar}}</h2>
+{{>footer}}

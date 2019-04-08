@@ -1,0 +1,15 @@
+{{>header}}
+	<h1>Ver Cursos</h1>
+	<table class="table">
+		<tr>
+			<th>Nombre</th>
+			<th>Descripcion</th>
+			<th>Valor</th>
+		</tr>
+		{{#if coordinador}}
+		{{{ListarCursosAdmin listado}}}
+		{{else}}
+		{{{ListarCursos listado}}}
+		{{/if}}
+	</table>
+{{>footer}}
